@@ -6,8 +6,6 @@ function calculateMoney(ticketSale) {
   }
 }
 
-
-
 function checkName(name) {
   if (typeof name !== "string") {
     return "invalid";
@@ -28,9 +26,19 @@ function checkName(name) {
   }
 }
 
-
 function deleteInvalids(array) {
-
-
+  if (Array.isArray(array)) {
+    const numArray = [];
+    for (const item of array) {
+      if (typeof item === 'number' && !isNaN(item) && !null && !undefined) {
+        numArray.push(item);
+      }
     }
+    return numArray;
+  } 
+  else {
+    return "“Invalid Array” Enter a valid array";
+  }
+}
 
+console.log(deleteInvalids([1,2,3,-4 ]));
