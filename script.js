@@ -2,7 +2,7 @@ function calculateMoney(ticketSale) {
   if (ticketSale >= 1) {
     return ticketSale * 120 - (500 + 8 * 50);
   } else {
-    return "'Invalid Number' Enter a Positive Number";
+    return "“Invalid Number” Enter a Positive Number";
   }
 }
 
@@ -81,7 +81,7 @@ function monthlySavings(arr, livingCost) {
     }
     const savings = salary - livingCost;
     if (savings < 0) {
-      return "earn more";
+      return "“earn more”";
     } else {
       return savings;
     }
@@ -89,5 +89,3 @@ function monthlySavings(arr, livingCost) {
     return "invalid input";
   }
 }
-
-console.log(monthlySavings('dajfh'));
